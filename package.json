@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/zkjaisq/vue-gulu/issues"
   },
-  "homepage": "https://github.com/zkjaisq/vue-gulu#readme"
+  "homepage": "https://github.com/zkjaisq/vue-gulu#readme",
+  "dependencies": {
+    "vue": "^2.6.8"
+  }
 }
