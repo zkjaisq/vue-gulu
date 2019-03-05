@@ -6,12 +6,51 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue-ui</title>
+    <style>
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+    </style>
+    <style>
+        /*css申明变量*/
+        :root{
+            --font-size:14px;
+            --button-height:32px;
+            --button-bg:white;
+            --button-active-bg:#eee;
+            --border-radius:4px;
+            --color:#999;
+            --border-color: #999999;
+            --border-color-hover:#666;
+        }
+    </style>
+    <style>
+        .g-button{
+            outline: none;
+            font-size: var(--font-size);
+            height: var(--button-height);
+            padding: 0 1em;
+            font: inherit;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            background-color: var(--button-bg);
+        }
+        .g-button:hover{
+            border: 1px solid var(--border-color-hover);
+        }
+        .g-button:active{
+            background-color: var(--button-active-bg);
+        }
+        #app{
+            margin: 20px;
+        }
+        body{
+            font-size: var(--font-size);
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <p>{{message}}</p>
+        <g-button>{{message}}</g-button>
     </div>
-
 </body>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
 <script src="./button.js"></script>
