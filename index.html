@@ -7,27 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>vue-ui</title>
     <style>
-        *{padding: 0;margin: 0;box-sizing: border-box;}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
     </style>
     <style>
         /*css申明变量*/
-        :root{
-            --font-size:14px;
-            --button-height:32px;
-            --button-bg:white;
-            --button-active-bg:#eee;
-            --border-radius:4px;
-            --color:#999;
+        :root {
+            --font-size: 14px;
+            --button-height: 32px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #999;
             --border-color: #999999;
-            --border-color-hover:#666;
+            --border-color-hover: #666;
+        }
+
+        #app {
+            margin: 20px;
+        }
+
+        body {
+            font-size: var(--font-size);
+        }
+    </style>
+    <style>
+        /*图标和子一样就可以的了*/
+        .icon {
+            width: 1em;
+            height: 1em;
         }
     </style>
 </head>
 <body>
-    <div id="app">
-        <g-button>{{message}}</g-button>
-    </div>
+<div id="app">
+    <g-button>按钮</g-button>
+    <g-button icon="idownload" icon-position="left">按钮</g-button>
+    <g-button icon="idownload" icon-position="right">按钮</g-button>
+</div>
 </body>
+<script src="//at.alicdn.com/t/font_1072178_2k3lg57vsfd.js"></script>
 <script src="src/app.js"></script>
 <script>
 
