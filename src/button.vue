@@ -1,7 +1,7 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-        <g-icon class="loading" name="loading"></g-icon>
-        <g-icon v-if="icon"  :name="icon"></g-icon>
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+        <g-icon  class="loading" name="loading" v-if="loading"></g-icon>
+        <g-icon v-if="icon && !loading"  :name="icon"></g-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -13,6 +13,10 @@
 //        props: ['icon', 'iconPosition'],//props的传值，父组件中驼峰必须使用"-"，
         props:{
             icon:{},
+            loading:{
+                type:Boolean,
+                default:false,
+            },
             iconPosition:{
                 type:String,
                 default:'left',
@@ -35,6 +39,7 @@
     }
     .g-button {
         outline: none;
+        cursor: pointer;
         font-size: var(--font-size);
         height: var(--button-height);
         padding: 0 1em;
