@@ -8,6 +8,9 @@
     </button>
 </template>
 <script>
+    import Vue from "vue";
+    import Icon from './icon.vue';
+    Vue.component('g-icon',Icon)
     export default ({
         name: '',
 //        props: ['icon', 'iconPosition'],//props的传值，父组件中驼峰必须使用"-"，
